@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon-32x32.png">
+  <title>Get In Touch - Lee Meryl Friedlander</title>
+  <meta name="description" content="Director portfolio, work, resume, press, contact." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <div class="brand">
+            <div class="logo"><img src="assets/logo.webp" alt=""></div>
+           
+        </div>
+
+         <button class="nav-toggle" id="navToggle"><i class="fa-solid fa-bars"></i></button>
+
+        <nav class="nav" id="mainNav">
+          <a href="index.html">About</a>
+          <a href="work.html">Work</a>
+          <a href="resume.html">Resume</a>
+          <a class="active" href="get-in-touch.html">Get in Touch</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="get-in-touch">
+
+    <div class="movie-container">
+      <div class="contact-grid">
+
+        <div>
+          <div class="section-title" style="text-align:left; padding-top:0;">
+            <h2>Contact</h2>
+          </div>
+
+          <div class="contact-list">
+            <div class="contact-item-g">
+             
+                <i class="fa-solid fa-phone"></i>
+                <p>SUSAN SUSSMAN Innovative Artists Agency 310.656.5133</p>
+               
+            </div>
+
+            <div class="contact-item-g">
+             
+                <i class="fa-regular fa-envelope-open"></i>
+                 <p>
+                     <a href="mailto:Susan.Sussman@iala.com">Susan.Sussman@iala.com</a>
+                </p>
+              
+            </div>
+
+            <div class="contact-item-g">
+                <i class="fa-solid fa-phone"></i>
+                <p>MANAGER: EVOKE ENTERTAINMENT, STAN SPRY, LUIS PINEIRO, JEFF HOLLAND</p>
+            </div>
+
+            <div class="contact-item-g">
+                <i class="fa-regular fa-envelope-open"></i>
+                 <p>
+                  <a href="mailto:Stan@evokeentertainment.com">Stan@evokeentertainment.com</a>
+                </p>
+            </div>
+
+             <div class="contact-item-g">
+                <i class="fa-regular fa-envelope-open"></i>
+                <p>
+                      <a href="mailto:Luis@evokeentertainment.com">Luis@evokeentertainment.com</a>
+                 </p>
+            </div>
+
+             <div class="contact-item-g">
+                <i class="fa-regular fa-envelope-open"></i>
+                 <p>
+                    <a href="mailto:Jeff@evokeentertainment.com">Jeff@evokeentertainment.com</a>
+                </p>
+            </div>
+
+             <div class="contact-item-g">
+                <i class="fa-solid fa-phone"></i>
+                <p>
+                    <a href="tel:+13104028865">310-402-8865</a>
+                </p> 
+            </div>
+
+          </div>
+        </div>
+
+        <!-- <div class="form-card">
+          <form >
+
+         
+              <div class="field">
+                <input type="text" placeholder="Your name" />
+              </div>
+
+              <div class="field">
+                <input type="email" placeholder="Your email" />
+              </div>
+
+                <div class="field">
+                <input type="text" placeholder="Phone" />
+                </div>
+
+                <div class="field">
+                  <textarea placeholder="Message"></textarea>
+                </div>
+
+            <button class="submit" type="submit">Send a Message</button>
+          </form>
+        </div> -->
+
+
+        <div class="form-card">
+  <form action="https://api.web3forms.com/submit" method="POST" id="cont">
+    
+    <!-- Web3Forms required -->
+    <input type="hidden" name="access_key" value="37a6565c-6b7f-4470-aedd-0a70e295c5d8">
+
+    <!-- Optional but recommended -->
+    <input type="hidden" name="subject" value="New Contact Form Submission">
+    <input type="hidden" name="from_name" value="Lee Meryl Friedlander Website">
+    
+    <div class="field">
+      <input type="text" name="name" placeholder="Your name" required />
+    </div>
+    
+    <div class="field">
+      <input type="email" name="email" placeholder="Your email" required />
+    </div>
+    
+    <div class="field">
+      <input type="number" name="phone" placeholder="Phone" />
+    </div>
+    
+    <div class="field">
+      <textarea name="message" placeholder="Message" required></textarea>
+    </div>
+    
+    <div class="h-captcha" data-captcha="true"></div>
+    <button class="submit" type="submit">Send a Message</button>
+  </form>
+</div>
+
+      </div>
+    </div>
+
+  
+  </section>
+
+
+
+
+  <footer>
+     
+     <div>
+       © All Rights Reserved | Design by <a href="https://brandboosters.us">Brand Boosters LTD</a>
+     </div>
+
+      <button id="toTop" class="to-top" aria-label="Go to top" title="Go to top"><i class="fa-solid fa-chevron-up"></i></button>
+  </footer>
+
+
+
+    <!----  Add the Web3Forms script -->
+          <script src="https://web3forms.com/client/script.js" async defer></script>
+          <!-- <script>
+          const form = document.getElementById('cont');
+
+          form.addEventListener('submit', function(e) {
+
+              const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+              if (!hCaptcha) {
+                  e.preventDefault();
+                  alert("Please fill out captcha field")
+                  return
+              }
+          });
+          </script> -->
+
+  <script src="script.js"></script>
+</body>
+</html>

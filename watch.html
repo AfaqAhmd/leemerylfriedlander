@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon-32x32.png">
+  <title>Work - Lee Meryl Friedlander</title>
+  <meta name="description" content="Director portfolio, work, resume, press, contact." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+  
+ 
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <div class="brand">
+            <div class="logo"><img src="assets/logo.webp" alt=""></div>
+        </div>
+
+         <button class="nav-toggle" id="navToggle"><i class="fa-solid fa-bars"></i></button>
+
+        <nav class="nav" id="mainNav">
+          <a href="index.html">About</a>
+          <a href="work.html">Work</a>
+          <a href="resume.html">Resume</a>
+          <a href="get-in-touch.html">Get in Touch</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+
+
+<section class="watch-title-bar">
+  <div class="watch-title-bar-inner">
+    <h2 id="watchTitleTop"></h2>
+  </div>
+</section>
+
+
+
+
+<section class="watch-wrap">
+    <div class="container">
+
+      <h1 class="watch-title" id="watchTitle">
+        Title will load here
+      </h1>
+
+      <div class="player" id="playerBox">
+        <!-- iframe injected by JS -->
+         
+      </div>
+
+      <div class="meta" id="metaBox">
+        <!-- meta injected by JS -->
+      </div>
+
+    </div>
+  </section>
+  
+
+
+
+  <footer>
+     <!-- <span id="year"></span> -->
+     <div>
+       © All Rights Reserved | Design by <a href="https://brandboosters.us">Brand Boosters LTD</a>
+     </div>
+
+     <button id="toTop" class="to-top" aria-label="Go to top" title="Go to top"><i class="fa-solid fa-chevron-up"></i></button>
+  </footer>
+
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+
+    const title = params.get("title") || "Featured Work";
+    const subtitle = params.get("subtitle") || "";
+    const password = params.get("password") || "";
+    const video = params.get("video") || "";
+
+    const description = params.get("desc") || "";
+
+      // "Add your short synopsis here using the desc parameter from the Work page.";
+    const director = params.get("director") || "Lee Friedlander";
+
+    // Title
+    // const titleEl = document.getElementById("watchTitle");
+    // titleEl.textContent = subtitle ? `${title} , ${subtitle}` : title;
+
+    const finalTitle = subtitle ? `${title} , ${subtitle}` : title;
+    document.getElementById("watchTitleTop").textContent = finalTitle;
+    document.getElementById("watchTitle").textContent = finalTitle;
+
+
+    // Player
+    const playerBox = document.getElementById("playerBox");
+    if (video) {
+      const iframe = document.createElement("iframe");
+      iframe.src = video;
+      iframe.title = title;
+      iframe.allow = "autoplay; fullscreen; picture-in-picture";
+      iframe.allowFullscreen = true;
+      playerBox.appendChild(iframe);
+    } 
+    
+    else {
+      playerBox.style.display = "flex";
+      playerBox.style.alignItems = "center";
+      playerBox.style.justifyContent = "center";
+      playerBox.style.color = "#fff";
+      playerBox.style.fontSize = "12px";
+      playerBox.textContent = "No video URL provided.";
+    }
+
+    // Meta
+    const metaBox = document.getElementById("metaBox");
+
+    const passLine = password
+      ? `<div><strong>Password:</strong> <span class="password-badge">${password}</span></div>`
+      : "";
+
+    metaBox.innerHTML = `
+      ${passLine}
+      <div style="margin:8px 0;">${description}</div>
+      <div><strong>Director:</strong> ${director}</div>
+    `;
+  </script>
+
+
+
+ 
+  <script src="script.js"></script>
+</body>
+</html>
